@@ -25,11 +25,12 @@ var burger = {
     // orm.update("burgers", {
     //   devoured: true
     // }, condition, cb);
+    console.log(id);
     Burgers.update({
+      devoured: true,
       where: {
-        id: id
-      },
-      devoured: true
+        id
+      }      
     }).then(cb);
   }
 };
